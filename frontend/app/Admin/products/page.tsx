@@ -1,8 +1,14 @@
+
 import React from 'react'
+import CreateProducts from './create-product'
+import ProductsTable from './products-table'
 
 const Products = () => {
   return (
-    <div>Products</div>
+    <div>
+      <CreateProducts/>
+      <ProductsTable/>
+    </div>
   )
 }
 
