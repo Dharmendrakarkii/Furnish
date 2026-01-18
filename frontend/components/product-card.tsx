@@ -3,13 +3,14 @@
 
 import { useRouter } from "next/navigation";
 import React from "react";
+import { Button } from "./ui/button";
 
 const ProductCard = ({ item }) => {
   const router = useRouter();
 
   return (
     <div
-      onClick={() => router.push(`/products/${item.id}`)}
+      // onClick={() => router.push()}
       className="cursor-pointer bg-white m-4 shadow-lg p-4 rounded w-[20%]"
     >
       <img
@@ -19,7 +20,9 @@ const ProductCard = ({ item }) => {
       />
       <div className="pt-2">
         <h3 className="font-bold text-lg">{item.title}</h3>
-        <p className="text-pink-600">${item.price}</p>
+        <div className="flex justify-between"><p className="text-pink-600">${item.price}</p>
+        <Button className="bg-pink-600 hover:bg-pink-700" onClick={()=>router.push(`/products/${item.id}`)}>View Product</Button></div>
+        
       </div>
     </div>
   );
