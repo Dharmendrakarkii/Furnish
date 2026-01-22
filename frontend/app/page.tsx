@@ -6,8 +6,9 @@ import Header from '@/components/navbar'
 
 const Home = () => {
   return (
-    <div>
+    <div className='flex flex-col '>
       <Header/>
+      
     <ProductHome/></div>
     
   )
